@@ -73,5 +73,20 @@ SWD6_character.model_validate_json(character_json, strict=True)
 character = json.loads(character_json)
 character["attributes"] = calculate_character_attributes(preference_attributes)
 
-print(character)
+print(f"Name: {character["name"]}")
+print(f"Species: {character["species"]}")
+print(f"Attributes:")
+print(f" Dexterity: {character["attributes"]["dexterity"]}")
+print(f" Perception: {character["attributes"]["perception"]}")
+print(f" Knowledge: {character["attributes"]["knowledge"]}")
+print(f" Strength: {character["attributes"]["strength"]}")
+print(f" Mechanical: {character["attributes"]["mechanical"]}")
+print(f" Technical: {character["attributes"]["technical"]}")
+print(f"Inventory: {character["inventory"]}")
+print(f"Backstory: {character["backstory"]}")
+
+
+
+
+
 
